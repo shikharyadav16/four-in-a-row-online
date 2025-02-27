@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="/socket.io/socket.io.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="start" >
+        <input type="text" placeholder="Name..." class="username">
+        <div class="info" style="color: red; margin-left: 10px;"></div>
+        <h2>Four in a Row:</h2>
+        <p style="color: white;">The classic strategy game where you try to connect four pieces in a row!</p>
+        <h2 style="color: rgb(255, 255, 255);">How to Play:</h2>
+        <ul>
+            <li>🎮 Two players take turns dropping pieces into a 6x7 grid.</li>
+            <li>🔴🟢 The goal is to connect four of your pieces in a row.</li>
+            <li>↘️ You can win horizontally, vertically, or diagonally.</li>
+            <li>🚀 Plan your moves to block your opponent and set up a win.</li>
+            <li>🏆 First player to connect four wins!</li>
+        </ul>
+        <button onclick="startGame()">Start</button>
+    </div>
+    <div class="players" style="display: none;">
+        <div class="myself"><i class="fa fa-user" aria-hidden="true" style="color: white;">&nbsp;&nbsp;</i>You</div>
+        <div class="symbol">⚔️</div>
+        <div class="opponent"><i class="fa fa-user" aria-hidden="true" style="color: white;"></i>&nbsp;&nbsp;Opponent</div>
+    </div>
+    <div class="token" style="display: none;">
+        Your Turn
+    </div>
+    <div class="loader-bg" style="display: none;">
+        <div class="loader"></div>
+    </div>
+    <div class="game" hidden>
+        <div class="container_btn"></div>
+        <div class="container"></div>
+        <div class="win_sec" hidden>
+            <div class="winner"></div>
+            <button onclick="restart()">Restart</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+
+    <script>
+
+        let username = document.getElementsByClassName('username')[0].value;
+
+
+    </script>
+</body>
+
+</html>
