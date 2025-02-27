@@ -10,7 +10,7 @@ const io = new Server(server, {
         methods: ["GET", "POST"]
     }
 });
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 app.use(express.static('public'));
 let waitingUsers = []; // Array to store waiting users
