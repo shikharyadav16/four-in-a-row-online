@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io();
 
 let container = document.getElementsByClassName('container')[0];
 let containerBtn = document.getElementsByClassName('container_btn')[0];
